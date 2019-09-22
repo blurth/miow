@@ -25,10 +25,12 @@ class Hotel extends Controller
             $k->distance = $distance;
         }
 
+        usort($hotel, array($this, "cmp"));
+
         return $hotel;
     }
 
-    function cmp($a, $b){return $a->distance>$b->distance;} //然后根据市区进行排序  如果区没有  就根据市排序 市没有就返回个日吧歘
+    function cmp($a, $b){return $a->distance>$b->distance;} //然后根据市区进行排序  如果区没有  就根据市排序 市没有就返回个屁
 
 
 
