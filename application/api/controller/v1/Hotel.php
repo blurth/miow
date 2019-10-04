@@ -4,11 +4,12 @@
 namespace app\api\controller\v1;
 
 
+use app\api\controller\BaseController;
 use app\api\model\PetHotel;
 use app\api\validate\LongitudeAndLatitude;
-use think\Controller;
 
-class Hotel extends Controller
+
+class Hotel extends BaseController
 {
     public function getHotelByLBS($lon,$lat)
     {

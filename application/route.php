@@ -14,3 +14,17 @@ use think\Route;
 Route::get('api/:version/banner/:id', 'api/:version.Banner/getBanner');
 
 Route::get('api/:version/hotel', 'api/:version.Hotel/getHotelByLBS');
+
+
+Route::group('api/:version/pet',function(){
+    Route::post('addpet', 'api/:version.Pet/CreateOrUpdatePet');
+    Route::get('indexpet', 'api/:version.Adopt/getAdoptByIndex');
+
+
+});
+
+Route::group('api/:version/hotel',function(){
+    Route::get('indexhotel', 'api/:version.Hotel/getHotelByLBS');
+
+
+});
