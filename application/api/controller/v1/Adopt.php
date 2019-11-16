@@ -12,6 +12,10 @@ class Adopt extends BaseController
 {
     public function getAdoptByIndex()
     {
+       return md5('ymls20190409' . 1564);
+
+
+
         $res = PetInfo::getIndexPet();
 
         if (empty($res)){
