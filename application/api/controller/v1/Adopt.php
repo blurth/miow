@@ -10,11 +10,11 @@ use app\lib\exception\MissException;
 
 class Adopt extends BaseController
 {
+    /*
+     * 获取领养宠物 默认10条
+     * */
     public function getAdoptByIndex()
     {
-       return md5('ymls20190409' . 1564);
-
-
 
         $res = PetInfo::getIndexPet();
 

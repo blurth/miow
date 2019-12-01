@@ -13,8 +13,6 @@ use think\Route;
 
 Route::get('api/:version/banner/:id', 'api/:version.Banner/getBanner');
 
-Route::get('api/:version/hotel', 'api/:version.Hotel/getHotelByLBS');
-
 
 Route::group('api/:version/pet',function(){
     Route::post('addpet', 'api/:version.Pet/CreateOrUpdatePet');
@@ -25,6 +23,13 @@ Route::group('api/:version/pet',function(){
 
 Route::group('api/:version/hotel',function(){
     Route::get('indexhotel', 'api/:version.Hotel/getHotelByLBS');
+});
 
 
+Route::group('api/:version/theme',function(){
+    Route::get('index', 'api/:version.Theme/getIndex');
+});
+
+Route::group('api/:version/recommend',function(){
+    Route::get('index', 'api/:version.Recommend/getRecommendByIndex');
 });
