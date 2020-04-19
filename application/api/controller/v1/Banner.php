@@ -14,6 +14,7 @@ class Banner extends BaseController
 {
     public function getBanner($id)
     {
+
         (new IDMustBePositiveInt())->goCheck();
         $banner = BannerModel::getBannerById($id);
         if (!$banner) {
@@ -22,6 +23,14 @@ class Banner extends BaseController
                 'errorCode' => 40000
             ]);
         }
+        return $banner;
+    }
+
+    public function getBannerByName($name)
+    {
+
+        $banner = BannerModel::getBannerByName($name);
+
         return $banner;
     }
 }
